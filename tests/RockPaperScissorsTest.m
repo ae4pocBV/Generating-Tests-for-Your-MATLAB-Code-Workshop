@@ -34,13 +34,13 @@ classdef RockPaperScissorsTest < matlab.unittest.TestCase
         function testInvalidInputPlayer1(testCase)
             p1 = "invalid";
             p2 = "rock";
-            testCase.verifyError(@() rockPaperScissors(p1, p2), 'MATLAB:unassignedOutputs');
+            testCase.verifyError(@() rockPaperScissors(p1, p2), 'MATLAB:validators:mustBeMember');
         end
 
         function testInvalidInputPlayer2(testCase)
             p1 = "rock";
             p2 = "invalid";
-            testCase.verifyError(@() rockPaperScissors(p1, p2), 'MATLAB:unassignedOutputs');
+            testCase.verifyError(@() rockPaperScissors(p1, p2), 'MATLAB:validators:mustBeMember');
         end
     end
 end
